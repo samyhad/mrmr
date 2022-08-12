@@ -24,7 +24,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 import mrmr_customized
 #from . import mrmr_customized
 
-mrmr_filter = mrmr_customized(k=10)
+mrmr_filter = mrmr_customized.mrmr_customized(k=10)
 clf = LinearSVC()
 mrmr_pipe = make_pipeline(mrmr_filter, clf)
 mrmr_pipe.fit(X_train, y_train)
